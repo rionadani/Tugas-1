@@ -1,5 +1,8 @@
 # README Tugas 2
 
+### Link Heroku
+https://tugas-1-riona.herokuapp.com/katalog/
+
 ### Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;
 <img width="621" alt="Bagan Tugas 1" src="https://user-images.githubusercontent.com/95161209/190307694-9914444b-eb53-480a-94f8-4921f25e93c6.png">
 
@@ -17,6 +20,3 @@ Poin 1:
    Membuka file HTML pada folder templates yang ada di dalam direktori katalog. Mengubah Fill me! yang ada di dalam HTML menjadi {{nama}} dan {{npm}} serta melakukan iterasi terhadap variabel list_barang
 <p>Poin 4:
     Membuat aplikasi pada heroku, lalu meng-copy API key dari akun. Menambahkan repository secret untuk API key dan Nama aplikasi pada heroku, dan melakukan re-run.
-
-### Link Heroku
-https://tugas-1-riona.herokuapp.com/katalog/
