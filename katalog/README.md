@@ -11,11 +11,11 @@ Virtual environment membantu setiap proyek untuk  memisahkan pengaturan dan pac
 ### Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
 Poin 1:
     Membuat fungsi dengan parameter request dengan return render(request, "katalog.html", context). Isi fungsinya adalah variabel data_barang_katalog yang berfungsi untuk menyimpan hasil query yang didapatkan dari pemanggilan fungsi query ke model database
-Poin 2:
+<p>Poin 2:
     Menggunakan files urls.py yang berada di folder katalog lalu membuat variabel app_name dan menambahkan path url ke urlpatterns
-Poin 3:
-    Membuka file HTML pada folder templates yang ada di dalam direktori katalog. Mengubah Fill me! yang ada di dalam HTML tag <p> menjadi {{nama}} dan {{npm}} lalu melakukan iterasi terhadap variabel list_barang.
- Poin 4:
+<p>Poin 3:
+   Membuka file HTML pada folder templates yang ada di dalam direktori katalog. Mengubah Fill me! yang ada di dalam HTML menjadi {{nama}} dan {{npm}} serta melakukan iterasi terhadap variabel list_barang
+<p>Poin 4:
     Membuat aplikasi pada heroku, lalu meng-copy API key dari akun. Menambahkan repository secret untuk API key dan Nama aplikasi pada heroku, dan melakukan re-run.
 
 ### Link Heroku
