@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"Fiery Priest",
+            "rating": "9.0",
+            "release_date": "15/02/2019",
+            "review": "Fun"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Hospital Playlist Season 1",
+            "rating": "10.0",
+            "release_date": "01/03/2020",
+            "review": "Heartwarming"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"Reply 1988",
+            "rating": "10.0",
+            "release_date": "06/11/2015",
+            "review": "Heartwarming"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Yes",
+            "title":"Prison Playbook",
+            "rating": "10.0",
+            "release_date": "22/11/2017",
+            "review": "Fun"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Guest",
+            "rating": "8.5",
+            "release_date": "12/09/2018",
+            "review": "Thrilling"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"Alchemy of Soul Part 1",
+            "rating": "9.8",
+            "release_date": "18/06/2022",
+            "review": "Magnificent"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Beauty Inside",
+            "rating": "9.0",
+            "release_date": "01/10/2018",
+            "review": "Sweet and light"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Extraordinary Attorney Woo",
+            "rating": "9.8",
+            "release_date": "29/07/2022",
+            "review": "Fun"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"Yes",
+            "title":"Taxi Driver",
+            "rating": "10.0",
+            "release_date": "9/04/2021",
+            "review": "Fun and thrilling"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Yes",
+            "title":"Go Ahead",
+            "rating": "9.5",
+            "release_date": "10/08/2020",
+            "review": "Heartwarming but too slow"
+        }
+    }
+]
