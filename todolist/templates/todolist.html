@@ -1,55 +1,59 @@
 {% extends 'base.html' %}
 
- {% block content %}
+{% block content %}
 
-  <h1>Lab 3 Assignment PBP/PBD</h1>
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <h5 class="navbar-brand mb-0 h1">To Do List</h5>
+    <a class="btn" href="{% url 'todolist:logout' %}" role="button" style="background-color: hsl(210, 31%, 68%);" >Logout</a>
+  </div>
+</nav>
 
-  <h5>User: </h5>
-  <p>{{user}}</p>
+<div class = "add_task">
 
-  <div class = "add_task">
+<header>
+  <h3 style="text-align:center;">User:</h3>
+  <h3 style="text-align:center;margin-bottom:20px;">{{user}}</h3>
+</header>
 
-  <table>
-    <tr>
-      <th>Date</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Status</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
-    {% for task in list_task %}
-    <tr>
-        <th>{{task.date}}</th>
-        <th>{{task.title}}</th>
-        <th>{{task.description}}</th>
-        
+<div class="card-deck">
+  {% for task in list_task %}
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{task.title}}</h5>
         {% if task.status %}  
-        <th>Selesai</th>
+          <h6 class="card-subtitle mb-2 text-muted">Selesai</h6>
         {% else %}
-        <th>Belum Selesai</th>
+          <h6 class="card-subtitle mb-2 text-muted">Belum Selesai</h6>
         {% endif %}
-          
-        <th>    
+        <p class="card-text">{{task.description}}</p>
+
+      <div class="container-button">
+        <div class="change-status">
           <form method="POST" action="{% url 'todolist:change_status' %}">
             {% csrf_token %}
             <input type="hidden" name="id" value="{{task.id}}">
-            <button type="submit">Change Status</button>
+            <button class="btn btn-primary btn-sm" type="submit">Change Status</button>
           </form>
-        </th>
-
-        <th>    
+        </div>
+        <div class="delete">
           <form method="POST" action="{% url 'todolist:delete_task' %}">
             {% csrf_token %}
             <input type="hidden" name="id" value="{{task.id}}">
-            <button type="submit">Delete Task</button>
+            <button class="btn btn-primary btn-sm" type="submit">Delete Task</button>
           </form>
-        </th>
+        </div>
+      </div>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">{{task.date}}</small>
+    </div>
+    </div>
+  {% endfor %}
+</div>
+  
+<footer>
+  <a button class="btn btn-lg" style="background-color: hsl(210, 31%, 68%);" href="{% url 'todolist:add_task' %}">Tambah Task Baru</a>
+</footer>
 
-    </tr>
-    {% endfor %}
-  </table>
-
-  <button><a href="{% url 'todolist:add_task' %}">Tambah Task Baru</a></button>
-  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-
- {% endblock content %}
+{% endblock content %}

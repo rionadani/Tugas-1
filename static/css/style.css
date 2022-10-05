@@ -1,7 +1,57 @@
-table{
-    border: 1px solid;
+body{
+    background: plum;
 }
 
-th{
-    border: 1px solid;
+.login {
+    margin: 20px;
+}
+
+.add_task{
+    margin: 20px;
+    /* background-color: rgb(114, 202, 202); */
+}
+
+.card-deck{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+
+.change-status{
+    display: inline-block;
+}
+
+.delete{
+    display: inline-block;
+}
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+}   
+
+.form{
+    max-width: 15;
+}
+
+textarea{
+    resize: none;
+    width: 300px;
+    height: 150px;
+}
+
+body{
+    background: rgb(174,210,238);
+    background: radial-gradient(circle, rgba(174,210,238,1) 0%, rgba(157,179,207,1) 100%);
+}
+
+.input-group mb-3{
+    width: 50px;
+}
+
+.btn{
+    background-color: hsl(210, 31%, 68%);
 }

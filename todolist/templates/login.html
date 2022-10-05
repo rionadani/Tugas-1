@@ -6,39 +6,36 @@
 
 {% block content %}
 
-<div class = "login">
+<div class = "login" style="text-align:center;">
 
     <h1>Login</h1>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table class="table solid border w-auto" style="margin-left:auto;margin-right:auto;margin-top:25px;">
             <tr>
-                <td>Username: </td>
+                <td style="vertical-align:middle;">Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
             </tr>
                     
             <tr>
-                <td>Password: </td>
+                <td style="vertical-align:middle;">Password: </td>
                 <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
             </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
         </table>
+        <input class="btn login_btn" style="background-color: hsl(210, 31%, 68%); margin-bottom:20px;" type="submit" value="Login">
     </form>
-
+   
+        
     {% if messages %}
         <ul>
             {% for message in messages %}
                 <li>{{ message }}</li>
             {% endfor %}
         </ul>
-    {% endif %}     
+    {% endif %}  
         
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+    Belum mempunyai akun? <a class="btn" href="{% url 'todolist:register' %}" style="background-color: hsl(210, 31%, 68%);">Buat Akun</a>
 
 </div>
 
