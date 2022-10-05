@@ -1,14 +1,9 @@
-body{
-    background: plum;
-}
-
 .login {
     margin: 20px;
 }
 
 .add_task{
     margin: 20px;
-    /* background-color: rgb(114, 202, 202); */
 }
 
 .card-deck{
@@ -17,7 +12,6 @@ body{
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
-
 
 
 .change-status{
@@ -33,10 +27,6 @@ footer{
     text-align: center;
 }   
 
-.form{
-    max-width: 15;
-}
-
 textarea{
     resize: none;
     width: 300px;
@@ -48,10 +38,9 @@ body{
     background: radial-gradient(circle, rgba(174,210,238,1) 0%, rgba(157,179,207,1) 100%);
 }
 
-.input-group mb-3{
-    width: 50px;
-}
-
-.btn{
-    background-color: hsl(210, 31%, 68%);
+@media (max-width: 600px) {
+    .layout {
+      display: flex;
+      flex-direction: column;
+    }
 }
