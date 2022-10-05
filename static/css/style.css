@@ -29,8 +29,8 @@ footer{
 
 textarea{
     resize: none;
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
 }
 
 body{
@@ -42,11 +42,5 @@ body{
     .card-deck {
       display: flex;
       flex-direction: column;
-    }
-}
-
-@media (max-width: 600px) {
-    table {
-      width: 600px;
     }
 }
