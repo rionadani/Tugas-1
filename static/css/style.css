@@ -39,7 +39,7 @@ body{
 }
 
 @media (max-width: 600px) {
-    .layout {
+    .card-deck {
       display: flex;
       flex-direction: column;
     }
