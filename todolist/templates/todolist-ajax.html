@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>To Do List</h1>
+
+    <h5>User: {{user}}</h5>
+
+    <div class = "add_task">
+
+    <table id="table"></table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        async function show_table(){
+        document.getElementById("table").innerHTML = ""
+        let htmlString = `<tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>`
+        $.get("{% url 'todolist:show_json' %}", function(data){
+            for(var i = 0; i < data.length; i++){
+                htmlString += `\n<tr>
+                    <th>${data[i].fields.date}</th>
+                    <th>${data[i].fields.title}</th>
+                    <th>${data[i].fields.description}</th>
+                </tr>`
+            }
+            document.getElementById("table").innerHTML = htmlString
+        })        
+    }
+
+        $(document).on('submit', '#form_add', function(e) {
+            e.preventDefault()
+            show_table()
+            $.ajax({
+                type:"POST",
+                url:"{% url 'todolist:add_task_ajax' %}",
+                data:{
+                    date:$("#date").val(),
+                    title:$("#title").val(),
+                    description:$("#description").val(),
+                    csrfmiddlewaretoken:'{{ csrf_token }}',
+                },
+                dataType: 'json',
+            })
+            document.getElementById("form_add").reset();
+            show_table()
+        })
+
+        show_table()
+    </script>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Tambah Task</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Task Baru</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <!-- Isi Form -->
+            <form id="form_add" method="POST" action="">
+                <div class="modal-body">
+                        <p>Title</p>
+                        <p><input id="title" type="text" name="title" placeholder="Title" class="form-control"></p>
+                        <p>Description</p>
+                        <p><input id="description" type="text" name="description" placeholder="Description" class="form-control"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Tambah Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <button><a href="{% url 'todolist:add_task' %}">Tambah Task Baru</a></button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
