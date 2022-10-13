@@ -8,7 +8,7 @@
 Event-driven adalah suatu paradigma pemrograman yang alur programnya ditentukan oleh suatu event yang merupakan keluaran atau tindakan pengguna, atau bisa berupa pesan dari program lainnya. Contohnya adalah pada saat menekan tombol Tambah Task akan muncul sebuah modal.
 
 ### Jelaskan penerapan asynchronous programming pada AJAX.
-Script akan mengirimkan request ke server dan akan melanjutkan eksekusi tanpa menunggu responds. Apabila responds telah diterima, scrip akan mengeksekusi action yang berkaitan tanpa diperlukan refresh oleh user.
+Script akan mengirimkan request ke server dan akan melanjutkan eksekusi tanpa menunggu responds. Apabila responds telah diterima, script akan mengeksekusi action yang berkaitan tanpa diperlukan refresh oleh user.
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Membuat fungsi show_json, show_todolist_ajax, dan add_task_ajax pada views.py 
